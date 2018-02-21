@@ -1,5 +1,4 @@
-i
-nstall.packages("ggplot2")
+install.packages("ggplot2")
 install.packages("pacman")
 library(ggplot2)
 library (pacman)
