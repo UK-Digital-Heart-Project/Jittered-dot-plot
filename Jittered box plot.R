@@ -18,7 +18,8 @@ test<-r_data_frame(n=1000,
                    group(x=c("X", "Y"))
 )
 
-#Flag some of the higher IQ values as a different colour in the dot plot. Could be any pre-defined factor in the data you want to distinguish
+#Flag some of the higher IQ values as a different colour in the dot plot.
+#Could be any pre-defined factor in the data you want to distinguish
 
 test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal", "Abnormal"))
 
