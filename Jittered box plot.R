@@ -28,7 +28,7 @@ test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal",
 ggplot(na.omit(test[,c("Group", "IQ", "Cat")]), aes(factor(Group), IQ)) +
   geom_jitter(alpha=I(0.3), position=position_jitter(width=0.1, height=0.1), aes(color=factor(Cat)), size=4) +
   xlab("\nGroups") +
-  ylab("\nArbitray scale") +
+  ylab("\nArbitrary scale") +
   geom_boxplot(outlier.shape=NA, fill= NA,  colour="black", width=0.15, lwd=1) + scale_colour_manual(values=c("lightskyblue1", "red")) +
   scale_y_continuous (limits=c(50,150), expand=c(0,0.2)) +
   ggtitle (" ")
