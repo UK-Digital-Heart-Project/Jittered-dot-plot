@@ -5,7 +5,6 @@ library (pacman)
 pacman::p_load_gh("trinker/wakefield")
 pacman::p_load(dplyr, tidyr, ggplot2)
 
-
 #Set the theme to white background and just y-axis
 
 theme_update(axis.ticks.x = element_blank(), axis.line.y=element_line(colour="black"), axis.line.x = element_blank(), axis.text = element_text(colour="black"), panel.grid.major = element_blank(),
@@ -19,10 +18,9 @@ test<-r_data_frame(n=1000,
                    group(x=c("X", "Y"))
 )
 
-#Flag some of these to show in dot plot later
+#Flag some of the higher IQ values as a different colour in dot plot. But could be any pre-defined factor in the data you want to plot.
 
 test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal", "Abnormal"))
-
 
 #Dot plot
 #Two groups with transparent box plots and jittered data points coloured by category
