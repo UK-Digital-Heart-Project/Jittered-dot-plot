@@ -1,4 +1,5 @@
-install.packages("ggplot2")
+i
+nstall.packages("ggplot2")
 install.packages("pacman")
 library(ggplot2)
 library (pacman)
@@ -25,6 +26,7 @@ test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal",
 
 #Dot plot
 #Transparent box plots (Groups X and Y) with jittered data points coloured as red or blue according to the "Cat" flag set above.
+
 ggplot(na.omit(test[,c("Group", "IQ", "Cat")]), aes(factor(Group), IQ)) +
   geom_jitter(alpha=I(0.3), position=position_jitter(width=0.1, height=0.1), aes(color=factor(Cat)), size=4) +
   xlab("\nGroups") +
