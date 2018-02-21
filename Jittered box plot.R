@@ -24,7 +24,6 @@ test<-r_data_frame(n=1000,
 
 test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal", "Abnormal"))
 
-#Dot plot
 #Transparent box plots (Groups X and Y) with jittered data points coloured as red or blue according to the "Cat" flag set above.
 
 ggplot(na.omit(test[,c("Group", "IQ", "Cat")]), aes(factor(Group), IQ)) +
