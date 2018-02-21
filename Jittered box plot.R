@@ -21,7 +21,7 @@ test<-r_data_frame(n=1000,
 
 #Flag some of these to show in dot plot later
 
-test$Cat<-as.factor(ifelse(test$IQ>110,"Normal", "Abnormal"))
+test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal", "Abnormal"))
 
 #Dot plot
 #Two groups with transparent box plots and jittered data points coloured by category
