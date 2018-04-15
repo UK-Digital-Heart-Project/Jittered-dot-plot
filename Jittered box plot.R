@@ -5,7 +5,7 @@ library (pacman)
 pacman::p_load_gh("trinker/wakefield")
 pacman::p_load(dplyr, tidyr, ggplot2)
 
-#Set the theme to white background and just y-axis
+#Set the theme to white background and just y-axis.
 
 theme_update(axis.ticks.x = element_blank(), axis.line.y=element_line(colour="black"), axis.line.x = element_blank(), axis.text = element_text(colour="black"), panel.grid.major = element_blank(),
              panel.grid.minor = element_blank(),  panel.background = element_blank(), axis.text.x  = element_text(size=20), axis.text.y  = element_text(size=20), axis.title.x  = element_text(size=22, vjust=0.1, face="bold"),
