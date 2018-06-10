@@ -9,7 +9,7 @@ pacman::p_load(dplyr, tidyr, ggplot2)
 
 theme_update(
   axis.ticks.x = element_blank(),
-  axis.line.y=element_line(colour="black"),
+  axis.line.y = element_line(colour="black"),
   axis.line.x = element_blank(),
   axis.text = element_text(colour="black"),
   panel.grid.major = element_blank(),
@@ -25,8 +25,8 @@ theme_update(
 
 #Create dummy data - n=1000, IQ values, two groups.
 
-test<-r_data_frame(
-  n=1000,
+test = r_data_frame(
+  n = 1000,
   iq,
   group(x=c("X", "Y"))
 )
