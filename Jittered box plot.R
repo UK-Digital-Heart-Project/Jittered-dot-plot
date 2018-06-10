@@ -25,9 +25,10 @@ theme_update(
 
 #Create dummy data - n=1000, IQ values, two groups.
 
-test<-r_data_frame(n=1000,
-                   iq,
-                   group(x=c("X", "Y"))
+test<-r_data_frame(
+  n=1000,
+  iq,
+  group(x=c("X", "Y"))
 )
 
 #Flag some of the higher IQ values so that they will show as a different colour in the dot plot.
@@ -38,7 +39,8 @@ test$Cat<-as.factor(ifelse(test$IQ>(sample(110:125,1000,replace=TRUE)),"Normal",
 #Plot data.
 #Two groups (X and Y) with transparent box plots and jittered data points (IQ) coloured by category (Cat).
 
-ggplot(na.omit(test[,c("Group", "IQ", "Cat")]), aes(factor(Group), IQ)) +
+ggplot(
+  na.omit(test[,c("Group", "IQ", "Cat")]), aes(factor(Group), IQ)) +
   geom_jitter(alpha=I(0.3), position=position_jitter(width=0.1, height=0.1), aes(color=factor(Cat)), size=4) +
   xlab("\nGroups") +
   ylab("\nArbitrary scale") +
