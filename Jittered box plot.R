@@ -7,9 +7,21 @@ pacman::p_load(dplyr, tidyr, ggplot2)
 
 #Set the theme to white background and just y-axis.
 
-theme_update(axis.ticks.x = element_blank(), axis.line.y=element_line(colour="black"), axis.line.x = element_blank(), axis.text = element_text(colour="black"), panel.grid.major = element_blank(),
-             panel.grid.minor = element_blank(),  panel.background = element_blank(), axis.text.x  = element_text(size=20), axis.text.y  = element_text(size=20), axis.title.x  = element_text(size=22, vjust=0.1, face="bold"),
-             axis.title.y  = element_text(size=22, face = "bold", vjust=0.9, angle = 90), axis.line = element_line(size = 1.2, linetype = "solid"), axis.ticks = element_line(size = 1), legend.position="none") 
+theme_update(
+  axis.ticks.x = element_blank(),
+  axis.line.y=element_line(colour="black"),
+  axis.line.x = element_blank(),
+  axis.text = element_text(colour="black"),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(), 
+  panel.background = element_blank(),
+  axis.text.x  = element_text(size=20),
+  axis.text.y  = element_text(size=20),
+  axis.title.x  = element_text(size=22, vjust=0.1, face="bold"),
+  axis.title.y  = element_text(size=22, face = "bold", vjust=0.9, angle = 90),
+  axis.line = element_line(size = 1.2, linetype = "solid"),
+  axis.ticks = element_line(size = 1), legend.position="none"
+) 
 
 #Create dummy data - n=1000, IQ values, two groups.
 
